@@ -1,0 +1,26 @@
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.k1, .k2, .k3, .k4, .k5, .k6, .k7{
+    font-size: 1.5rem;
+    padding: .5rem 2rem;
+    margin-left: 2rem;
+    background-color: bisque;
+    border-radius: 5px;
+    margin-top: 40px;
+}
+.endButtonDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    
+}
+.start{
+    font-size: 1.5rem;
+    padding: .5rem 2rem;
+    border-radius: 10px;
+    background-color: aquamarine;
+}
