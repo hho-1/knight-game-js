@@ -48,27 +48,27 @@ const hitFunction = () => {
             }
             else{
 
-            knight.val -= damagePoint;
-            if(index === knightArray.length-1){
+                knight.val -= damagePoint;
+                if(index === knightArray.length-1){
                 
-                console.log(`${knight.name} hit ${knightArray[0].name} with ${damagePoint} damage points`);
-                if(knightArray[0].val <= 0){
-                    console.log(`${knightArray[0].name} tükendi.`);
+                    console.log(`${knight.name} hit ${knightArray[0].name} with ${damagePoint} damage points`);
+                    if(knightArray[0].val <= 0){
+                        console.log(`${knightArray[0].name} tükendi.`);
                     
-                    knightArray.splice(0, 1)
-                }
+                        knightArray.splice(0, 1)
+                    }
                 
-            }
-            else {
-                console.log(`${knight.name} hit ${knightArray[index+1].name} with ${damagePoint} damage points`);
-                if(knightArray[index+1].val <= 0){
-                    console.log(`${knightArray[index+1].name} tükendi.`);
+                }
+                else {
+                    console.log(`${knight.name} hit ${knightArray[index+1].name} with ${damagePoint} damage points`);
+                    if(knightArray[index+1].val <= 0){
+                        console.log(`${knightArray[index+1].name} tükendi.`);
                     
-                    knightArray.splice(index+1, 1)
-                }
+                        knightArray.splice(index+1, 1)
+                    }
                 
+                }
             }
-        }
             
         })
     }while(knightArray.length > 0)
