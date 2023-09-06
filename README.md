@@ -1,1 +1,3 @@
 # knight-game-js
+## Description:
+Problem: There are 7 knights in a place, which are standing next to each other in a circle shape. Starting from first knight, they are hitting the next one with a random damage power between 1 to 7 points. Each knight has 100 point lives total. When live points of a knight finishes, he/she must be out of the game, and circle continues with the next knight. You should write to the console what happened, such as "K2 hit K3 with 5 damage points." At the end, the last knight will win the game. You should write for example "K5 won the game" to the console. There are no Html or css necessities in this problem, writing to the console is sufficient.
