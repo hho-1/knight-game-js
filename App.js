@@ -30,8 +30,6 @@ let knightArray = [
     {name: k6.innerHTML, val: initialPointK6}, 
     {name: k7.innerHTML, val: initialPointK7}, 
 ]
-//console.log(knightArray);
-let knightArrayValues = [100, 100, 100, 100, 100, 100, 100]
 
 
 
@@ -39,31 +37,33 @@ const hitFunction = () => {
     do{
         knightArray.filter((item) => item.val > 0).map((knight) => {
             let damagePoint = Math.floor(Math.random() * 7 + 1);
-            const index = knightArray.indexOf(knight)
+            
 
             if(knightArray.length === 1){
-                console.log(`${knightArray[0].name} won the game with ${knightArray[0].val} points`);
-                knightArray[0].val -= 100;
+                console.log(`${knight.name} won the game with ${knight.val} points`);
+                //knight.val -= 100;
                 knightArray.splice(0, 1)
             }
             else{
-
-                knight.val -= damagePoint;
-                if(index === knightArray.length-1){
-                
+                const index = knightArray.indexOf(knight)
+                if(index === knightArray.length - 1){
+                    
+                    knightArray[0].val -= damagePoint;
                     console.log(`${knight.name} hit ${knightArray[0].name} with ${damagePoint} damage points`);
+                    
                     if(knightArray[0].val <= 0){
-                        console.log(`${knightArray[0].name} tükendi.`);
+                        console.log(`${knightArray[0].name} is out`);
                     
                         knightArray.splice(0, 1)
-                    }
-                
+                    }    
                 }
                 else {
+                    
+                    knightArray[index+1].val -= damagePoint;
                     console.log(`${knight.name} hit ${knightArray[index+1].name} with ${damagePoint} damage points`);
                     if(knightArray[index+1].val <= 0){
-                        console.log(`${knightArray[index+1].name} tükendi.`);
-                    
+                        console.log(`${knightArray[index+1].name} is out.`);
+
                         knightArray.splice(index+1, 1)
                     }
                 
